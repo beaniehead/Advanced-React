@@ -4,5 +4,6 @@
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#4CAE51",
     "titleBar.inactiveBackground": "#4CAE51"
-  }
+  },
+  "prettier.eslintIntegration": true
 }
