@@ -68,8 +68,8 @@ const Header = () => (
     </div>
     <div className="sub-bar">
       <p>Search</p>
-      <div>Cart</div>
     </div>
+    <div>Cart</div>
   </StyledHeader>
 );
 
