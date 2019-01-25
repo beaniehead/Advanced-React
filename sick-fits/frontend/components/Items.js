@@ -28,7 +28,7 @@ const ItemsList = styled.div`
   grid-gap: 60px;
 `;
 
-export default class Items extends Component {
+class Items extends Component {
   render() {
     return (
       <div>
@@ -51,3 +51,6 @@ export default class Items extends Component {
     );
   }
 }
+
+export default Items;
+export { ALL_ITEMS_QUERY };
