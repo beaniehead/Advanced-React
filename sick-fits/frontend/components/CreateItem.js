@@ -28,11 +28,11 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
   state = {
-    title: 'Cool hat',
-    description: "It's good",
+    title: '',
+    description: '',
     image: '',
     largeImage: '',
-    price: 10,
+    price: 100000,
   };
 
   // as it's an arrow function, we don't have to bind this
@@ -84,20 +84,6 @@ class CreateItem extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
-              <label htmlFor="file">
-                Image
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  placeholder="Upload an image"
-                  required
-                  onChange={this.uploadFile}
-                />
-                {this.state.image && (
-                  <img src={this.state.image} alt="Upload preview" />
-                )}
-              </label>
               <label htmlFor="title">
                 Title
                 <input
@@ -133,6 +119,20 @@ class CreateItem extends Component {
                   value={this.state.description}
                   onChange={this.handleChange}
                 />
+              </label>
+              <label htmlFor="file">
+                Image
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  placeholder="Upload an image"
+                  required
+                  onChange={this.uploadFile}
+                />
+                {this.state.image && (
+                  <img src={this.state.image} alt="Upload preview" />
+                )}
               </label>
               <button type="submit">Submit</button>
             </fieldset>

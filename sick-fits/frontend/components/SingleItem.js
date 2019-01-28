@@ -50,6 +50,7 @@ class SingleItem extends Component {
           if (loading) return <p>Loading...</p>;
           if (!data.item) return <p>No item found for {this.props.id}</p>;
           const { item } = data;
+          console.log(item);
           return (
             <SingleItemStyles>
               <Head>
@@ -57,7 +58,7 @@ class SingleItem extends Component {
               </Head>
               <img src={item.largeImage} alt={item.title} />
               <div className="details">
-                <h2>Viewing {item.title}</h2>
+                <h2>{item.title}</h2>
                 <p>{item.description}</p>
               </div>
             </SingleItemStyles>

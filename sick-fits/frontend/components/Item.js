@@ -6,6 +6,7 @@ import ItemStyles from './styles/ItemStyles';
 import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
 import DeleteItem from './DeleteItem';
+import Pagination from './Pagination';
 
 export default class Item extends Component {
   static propTypes = {
