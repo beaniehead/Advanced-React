@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Item from './Item';
 import Pagination from './Pagination';
 import { perPage } from '../config';
+import Loading from './Loading';
+
 // Locate the query in the file where you will run the query
 
 const ALL_ITEMS_QUERY = gql`
@@ -44,7 +46,8 @@ class Items extends Component {
         >
           {/* destructuring the payload object into the three variables below */}
           {({ data, error, loading }) => {
-            if (loading) return <p>Loading...</p>;
+            // if (loading) return <p>Loading...</p>;
+            if (loading) return <Loading />;
             if (error) return <p>Error: {error.message}</p>;
             return (
               <ItemsList>

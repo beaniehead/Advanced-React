@@ -28,7 +28,7 @@ const Pagination = props => (
         <PagintionStyles>
           <Head>
             <title>
-              Sick Fits | Page {1 || page} of {pages}
+              Sick Fits | Page {page || 1} of {pages}
             </title>
           </Head>
           <Link
@@ -43,7 +43,7 @@ const Pagination = props => (
             </a>
           </Link>
           <p>
-            Page {1 || page} of {pages}
+            Page {page || 1} of {pages}
           </p>
           <p>{count} Items Total</p>
           <Link
